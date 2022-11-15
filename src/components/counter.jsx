@@ -8,8 +8,10 @@ class Counter extends Component {
   render() {
     return (
       <>
-        <span>{this.formatCount()}</span>
-        <button>Increment</button>
+        <span className="badge text-bg-primary m-2">{this.formatCount()}</span>
+        <button type="button" className="btn btn-secondary btn-sm">
+          Increment
+        </button>
       </>
     );
   }
