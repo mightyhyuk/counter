@@ -10,7 +10,11 @@ class Counter extends Component {
     return (
       <>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button type="button" className="btn btn-secondary btn-sm">
+        <button
+          onClick={this.handleIncrement}
+          type="button"
+          className="btn btn-secondary btn-sm"
+        >
           Increment
         </button>
         {this.state.tags.length !== 0 || <p>Create a new tag</p>}
@@ -22,6 +26,10 @@ class Counter extends Component {
       </>
     );
   }
+
+  handleIncrement = () => {
+    console.log("Increment clicked", this);
+  };
 
   getBadgeClasses() {
     let classes = "badge m-2 text-bg-";
