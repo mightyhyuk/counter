@@ -13,6 +13,7 @@ class Counter extends Component {
         <button type="button" className="btn btn-secondary btn-sm">
           Increment
         </button>
+        {this.state.tags.length !== 0 || <p>Create a new tag</p>}
         <ul>
           {this.state.tags.map((tag) => (
             <li key={tag}>{tag}</li>
