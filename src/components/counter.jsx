@@ -5,7 +5,7 @@ class Counter extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col col-1">
+          <div className="col-1">
             <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
           </div>
           <div className="col">
@@ -17,7 +17,7 @@ class Counter extends Component {
             </button>
             <button
               onClick={() => this.props.onDecrement(this.props.counter)}
-              className="btn btn-secondary btn-sm m-2"
+              className="btn btn-secondary btn-sm"
               disabled={this.props.counter.value === 0}
             >
               -
@@ -35,7 +35,7 @@ class Counter extends Component {
   }
 
   getBadgeClasses() {
-    let classes = "badge m-2 text-bg-";
+    let classes = "badge text-bg-";
     classes += this.props.counter.value === 0 ? "warning" : "primary";
     return classes;
   }
