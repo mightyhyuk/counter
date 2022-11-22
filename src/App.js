@@ -18,16 +18,16 @@ class App extends Component {
     return (
       <>
         <Navbar
-          totalCounters={this.state.counters.filter((c) => c.value > 0).length}
+          counterCount={this.state.counters.filter((c) => c.value > 0).length}
         />
         {/* <header className="App-header"></header> */}
         <main className="container">
           <Counters
             counters={this.state.counters}
-            onReset={this.handleReset}
-            onIncrement={this.handleIncrement}
-            onDecrement={this.handleDecrement}
-            onDelete={this.handleDelete}
+            handleReset={this.handleReset}
+            handleIncrement={this.handleIncrement}
+            handleDecrement={this.handleDecrement}
+            handleDelete={this.handleDelete}
           />
         </main>
       </>
