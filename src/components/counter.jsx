@@ -6,7 +6,9 @@ class Counter extends Component {
       <div className="container">
         <div className="row">
           <div className="col-1">
-            <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+            <span className={this.getBadgeClasses()}>
+              {this.getBadgeValue()}
+            </span>
           </div>
           <div className="col">
             <button
@@ -40,7 +42,7 @@ class Counter extends Component {
     return classes;
   }
 
-  formatCount() {
+  getBadgeValue() {
     const { value } = this.props.counter;
     return value === 0 ? "Zero" : value;
   }
