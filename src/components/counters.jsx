@@ -13,7 +13,7 @@ class Counters extends Component {
 
     return (
       <>
-        <button onClick={handleReset} className="btn btn-primary btn-sm">
+        <button onClick={handleReset} className="btn btn-info">
           Reset
         </button>
         {counters.map((counter) => (
