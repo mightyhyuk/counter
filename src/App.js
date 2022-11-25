@@ -20,7 +20,6 @@ class App extends Component {
         <Navbar
           counterCount={this.state.counters.filter((c) => c.value > 0).length}
         />
-        {/* <header className="App-header"></header> */}
         <main className="container">
           <Counters
             counters={this.state.counters}
