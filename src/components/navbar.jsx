@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Navbar = ({ counterCount }) => {
   return (
     <nav className="navbar bg-light">
@@ -11,6 +13,10 @@ const Navbar = ({ counterCount }) => {
       </div>
     </nav>
   );
+};
+
+Navbar.propTypes = {
+  counterCount: PropTypes.number,
 };
 
 export default Navbar;
